@@ -22,4 +22,4 @@ async def on_ready():
     await tree.sync()
     print(f"We have logged in as {client.user}")
 
-client.run('YOUR_DISCORD_BOT_TOKEN')
+client.run('MTI2NTMxOTM1NzIzNjM4Mzc3NA.GYjv9_.VhQqT0jUn92ApFQnTECubIh3-aaXkmDX5lVx04')
