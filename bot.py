@@ -22,7 +22,7 @@ async def on_ready():
     print(f"We have logged in as {client.user}")
 
 # Fetch the token from environment variable
-token = os.getenv('MTI2NTMxOTM1NzIzNjM4Mzc3NA.GYjv9_.VhQqT0jUn92ApFQnTECubIh3-aaXkmDX5lVx04')
+token = os.getenv('DISCORD_BOT_TOKEN')
 
 # Raise error if the token is not set
 if not token:
