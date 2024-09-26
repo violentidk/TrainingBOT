@@ -1,3 +1,4 @@
+import os
 import discord
 from discord import app_commands
 from discord.ext import commands
@@ -5,7 +6,6 @@ from discord.ext import commands
 intents = discord.Intents.default()
 client = commands.Bot(command_prefix='/', intents=intents)
 
-# Use the command tree already associated with the client
 @client.tree.command(name="event1", description="Starts event 1")
 async def event1(interaction: discord.Interaction):
     user = interaction.user.mention
@@ -21,4 +21,10 @@ async def on_ready():
     await client.tree.sync()
     print(f"We have logged in as {client.user}")
 
-client.run('YOUR_DISCORD_BOT_TOKEN')
+# Fetch the Discord bot token from the environment
+token = os.getenv('DISCORD_BOT_TOKEN')
+
+if not token:
+    raise ValueError("No Discord bot token found in environment variables!")
+
+client.run(token)
