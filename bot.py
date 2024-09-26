@@ -21,9 +21,10 @@ async def on_ready():
     await client.tree.sync()
     print(f"We have logged in as {client.user}")
 
-# Fetch the Discord bot token from the environment
-token = os.getenv('DISCORD_BOT_TOKEN')
+# Fetch the token from environment variable
+token = os.getenv('MTI2NTMxOTM1NzIzNjM4Mzc3NA.GYjv9_.VhQqT0jUn92ApFQnTECubIh3-aaXkmDX5lVx04')
 
+# Raise error if the token is not set
 if not token:
     raise ValueError("No Discord bot token found in environment variables!")
 
